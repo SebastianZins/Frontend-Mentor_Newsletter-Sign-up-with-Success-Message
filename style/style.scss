@@ -1,0 +1,23 @@
+/* import glob-variables */
+@import 'theme';
+
+body {
+    background: $offBlack;
+    font-size: 14px;
+    font-family: 'Inter';
+    color: $white;
+}
+
+.panel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 330px;
+    height: 550px;
+    background: $darkGrey;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 25px;
+    overflow: hidden;
+}

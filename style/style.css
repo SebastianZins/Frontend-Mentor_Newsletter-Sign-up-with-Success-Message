@@ -1,0 +1,25 @@
+/* import glob-variables */
+/* Colors - Primary */
+/* Colors - Neutral */
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+body {
+  background: hsl(0, 0%, 8%);
+  font-size: 14px;
+  font-family: "Inter";
+  color: hsl(0, 0%, 100%);
+}
+
+.panel {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  height: 550px;
+  background: hsl(0, 0%, 12%);
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 25px;
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */
