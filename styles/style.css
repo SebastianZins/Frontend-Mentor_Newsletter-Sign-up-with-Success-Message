@@ -1,0 +1,126 @@
+/* import glob-variables */
+/* Colors - Primary */
+/* Colors - Neutral */
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  background: hsl(235, 18%, 26%);
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: hsl(234, 29%, 20%);
+  margin: 0px;
+}
+
+main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: hsl(0, 0%, 100%);
+}
+
+.sign-up {
+  z-index: 0;
+}
+.sign-up p {
+  margin: 0px;
+}
+.sign-up .image {
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.sign-up .image img {
+  width: 100%;
+}
+.sign-up .title {
+  box-sizing: border-box;
+  padding: 15px 20px;
+  font-weight: 700;
+  font-size: 40px;
+}
+.sign-up .subtitle {
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.sign-up .list-items {
+  padding: 0px 51px;
+  box-sizing: border-box;
+  line-height: 21px;
+  vertical-align: top !important;
+}
+.sign-up .list-items ul {
+  padding: 0px;
+}
+.sign-up .list-items li {
+  padding: 5px 0px;
+  list-style: none;
+}
+.sign-up .list-items li::before {
+  position: absolute;
+  left: 21px;
+  content: url("../assets/images/icon-list.svg");
+  display: block;
+}
+.sign-up .mail {
+  margin-top: 40px;
+  padding: 0px 20px;
+}
+.sign-up .mail label {
+  font-size: 12px;
+}
+.sign-up .mail input {
+  margin-top: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 2px hsl(231, 7%, 60%) solid;
+  width: 100%;
+  border-radius: 10px;
+  height: 55px;
+  padding: 0px 20px;
+  transition: all 0.3s ease;
+}
+.sign-up .mail input::-moz-placeholder {
+  color: hsl(231, 7%, 60%);
+}
+.sign-up .mail input::placeholder {
+  color: hsl(231, 7%, 60%);
+}
+.sign-up .mail input:focus {
+  color: hsl(234, 29%, 20%);
+  border-color: hsl(234, 29%, 20%);
+}
+.sign-up .mail input:hover {
+  border-color: hsl(234, 29%, 20%);
+  cursor: pointer;
+}
+.sign-up .subscribe-button {
+  margin-top: 20px;
+  padding: 0px 20px;
+}
+.sign-up .subscribe-button button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 55px;
+  border-radius: 10px;
+  border: none;
+  background: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+.sign-up .subscribe-button button:hover {
+  cursor: pointer;
+  background: hsl(4, 100%, 67%);
+  box-shadow: 0px 5px 10px 0px rgba(255, 98, 87, 0.5);
+}
+.sign-up .subscribe-button button:active {
+  background: hsl(4, 100%, 67%);
+}
+
+.success-message {
+  z-index: 10;
+  visibility: hidden;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,139 @@
+/* import glob-variables */
+@import 'theme';
+
+body {
+    background: $charcoalGrey;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: $darkSlateGrey;
+    margin: 0px;
+}
+
+main {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: $white;
+}
+
+.sign-up {
+    z-index: 0;
+
+    p {
+        margin: 0px;
+    }
+
+    .image {
+        overflow: hidden;
+        width: 100%;
+        img {
+            width: 100%;
+        }
+        padding-bottom: 10px;
+    }
+
+    .title {
+        box-sizing: border-box;
+        padding: 15px 20px;
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .subtitle {
+        padding: 10px 20px;
+        box-sizing: border-box;
+    }
+
+    .list-items {
+        padding: 0px 51px;
+        box-sizing: border-box;
+        line-height: 21px;
+        vertical-align: top !important;
+
+        ul {
+            padding: 0px;
+        }
+
+        li {
+            padding: 5px 0px;
+            list-style: none;
+
+            &::before {
+                position: absolute;
+                left: 21px;
+                content: url('../assets/images/icon-list.svg');
+                display: block;
+            }
+        }
+    }
+
+    .mail {
+        margin-top: 40px;
+        padding: 0px 20px;
+
+        label {
+            font-size: 12px;
+        }
+
+        input {
+            margin-top: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            border: 2px $Grey solid;
+            width: 100%;
+            border-radius: 10px;
+            height: 55px;
+            padding: 0px 20px;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                color: $Grey;
+            }
+
+            &:focus {
+                color: $darkSlateGrey;
+                border-color: $darkSlateGrey;
+            }
+
+            &:hover {
+                border-color: $darkSlateGrey;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .subscribe-button {
+        margin-top: 20px;
+        padding: 0px 20px;
+
+        button {
+            box-sizing: border-box;
+            width: 100%;
+            height: 55px;
+            border-radius: 10px;
+            border: none;
+            background: $darkSlateGrey;
+            color: $white;
+            font-weight: 700;
+            font-size: 16px;
+            transition: 0.3s ease;
+
+            &:hover {
+                cursor: pointer;
+                background: $tomato;
+                box-shadow: 0px 5px 10px 0px rgba($tomato, 0.5);
+            }
+
+            &:active {
+                background: $tomato;
+            }
+        }
+    }
+}
+
+.success-message {
+    z-index: 10;
+    visibility: hidden;
+}
