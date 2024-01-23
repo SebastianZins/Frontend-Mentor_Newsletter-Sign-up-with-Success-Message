@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- displays site properly based on user's device -->
 
+        <!-- page icon -->
         <link
             rel="icon"
             type="image/png"
@@ -12,12 +13,23 @@
             href="./assets/images/favicon-32x32.png"
         />
 
+        <!-- page title -->
         <title>
             Frontend Mentor | Newsletter sign-up form with success message
         </title>
 
-        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+        <!-- style sheets -->
+        <link rel="stylesheet" type="text/css" href="styles/main_style.css" />
+        <link rel="stylesheet" type="text/css" href="styles/signUp_style.css" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="styles/successMessage_style.css"
+        />
         <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+
+        <!-- JS script file -->
+        <script type="text/javascript" src="./scripts/script.js"></script>
     </head>
     <body>
         <!-- Sign-up form start -->
@@ -26,43 +38,60 @@
             <section class="image">
                 <img src="assets/images/illustration-sign-up-mobile.svg" />
             </section>
-            <p class="title">Stay updated!</p>
-            <p class="subtitle">
-                Join 60,000+ product managers receiving monthly updates on:
-            </p>
-            <section class="list-items">
-                <ul>
-                    <li>Product discovery and building what matters</li>
-                    <li>Measuring to ensure updates are a success</li>
-                    <li>And much more!</li>
-                </ul>
-            </section>
-            <section class="mail">
+            <article>
+                <p class="title">Stay updated!</p>
+                <p class="subtitle">
+                    Join 60,000+ product managers receiving monthly updates on:
+                </p>
+                <section class="list-items">
+                    <ul>
+                        <li>Product discovery and building what matters</li>
+                        <li>Measuring to ensure updates are a success</li>
+                        <li>And much more!</li>
+                    </ul>
+                </section>
+            </article>
+            <form class="mail" name="mail-form">
                 <label>
                     <b>Email address</b>
                 </label>
+                <label class="notic-label" id="notice-label">
+                    <b>Valid email required</b>
+                </label>
                 <input
+                    class="mail-input"
+                    id="mail-input"
                     placeholder="email@company.com"
                     title="input Email address"
-                    type="email"
-                    pattern=".+@example\.com"
                     size="30"
-                    required
                 />
-            </section>
-            <section class="subscribe-button">
-                <button>Subscribe to monthly newsletter</button>
-            </section>
+            </form>
+            <button
+                onclick="toggle_successMessageActive()"
+                class="subscribe-button"
+            >
+                Subscribe to monthly newsletter
+            </button>
         </main>
 
         <!-- Sign-up form end -->
 
         <!-- Success message start -->
 
-        <main class="success-message">
-            Thanks for subscribing! A confirmation email has been sent to
-            ash@loremcompany.com. Please open it and click the button inside to
-            confirm your subscription. Dismiss message
+        <main class="success-message" id="success-message">
+            <article class="message">
+                <img src="assets/images/icon-success.svg" />
+                <h2>Thanks for subscribing!</h2>
+                <p>
+                    A confirmation email has been sent to
+                    <b>ash@loremcompany.com. </b>
+                    Please open it and click the button inside to confirm your
+                    subscription.
+                </p>
+            </article>
+            <button onclick="toggle_successMessageActive()">
+                Dismiss message
+            </button>
         </main>
 
         <!-- Success message end -->

@@ -1,0 +1,12 @@
+/* import glob-variables */
+/* Colors - Primary */
+/* Colors - Neutral */
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  background: hsl(235, 18%, 26%);
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: hsl(234, 29%, 20%);
+  margin: 0px;
+}/*# sourceMappingURL=main_style.css.map */

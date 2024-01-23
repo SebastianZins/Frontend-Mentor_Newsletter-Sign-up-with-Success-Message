@@ -3,24 +3,13 @@
 /* Colors - Neutral */
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-body {
-  background: hsl(235, 18%, 26%);
-  font-size: 16px;
-  font-family: "Roboto", sans-serif;
-  color: hsl(234, 29%, 20%);
-  margin: 0px;
-}
-
-main {
+.sign-up {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
   background: hsl(0, 0%, 100%);
-}
-
-.sign-up {
   z-index: 0;
 }
 .sign-up p {
@@ -64,13 +53,25 @@ main {
   display: block;
 }
 .sign-up .mail {
+  position: absolute;
+  bottom: 115px;
   margin-top: 40px;
   padding: 0px 20px;
+  box-sizing: border-box;
+  width: 100%;
 }
 .sign-up .mail label {
   font-size: 12px;
 }
-.sign-up .mail input {
+.sign-up .mail .notic-label {
+  float: right;
+  color: tomato;
+  visibility: hidden;
+}
+.sign-up .mail .invalid {
+  visibility: visible;
+}
+.sign-up .mail .mail-input {
   margin-top: 5px;
   font-size: 16px;
   box-sizing: border-box;
@@ -81,27 +82,25 @@ main {
   padding: 0px 20px;
   transition: all 0.3s ease;
 }
-.sign-up .mail input::-moz-placeholder {
+.sign-up .mail .mail-input::-moz-placeholder {
   color: hsl(231, 7%, 60%);
 }
-.sign-up .mail input::placeholder {
+.sign-up .mail .mail-input::placeholder {
   color: hsl(231, 7%, 60%);
 }
-.sign-up .mail input:focus {
+.sign-up .mail .mail-input:focus {
   color: hsl(234, 29%, 20%);
   border-color: hsl(234, 29%, 20%);
 }
-.sign-up .mail input:hover {
+.sign-up .mail .mail-input:hover {
   border-color: hsl(234, 29%, 20%);
   cursor: pointer;
 }
 .sign-up .subscribe-button {
-  margin-top: 20px;
-  padding: 0px 20px;
-}
-.sign-up .subscribe-button button {
-  box-sizing: border-box;
-  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  margin: 20px 20px;
+  width: calc(100% - 40px);
   height: 55px;
   border-radius: 10px;
   border: none;
@@ -111,16 +110,11 @@ main {
   font-size: 16px;
   transition: 0.3s ease;
 }
-.sign-up .subscribe-button button:hover {
+.sign-up .subscribe-button:hover {
   cursor: pointer;
   background: hsl(4, 100%, 67%);
   box-shadow: 0px 5px 10px 0px rgba(255, 98, 87, 0.5);
 }
-.sign-up .subscribe-button button:active {
+.sign-up .subscribe-button:active {
   background: hsl(4, 100%, 67%);
-}
-
-.success-message {
-  z-index: 10;
-  visibility: hidden;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=SignUp_style.css.map */
