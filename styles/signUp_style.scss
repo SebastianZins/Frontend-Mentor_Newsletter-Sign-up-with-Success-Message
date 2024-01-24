@@ -3,12 +3,11 @@
 
 .sign-up {
     position: absolute;
-    left: 0;
-    top: 0;
     height: 100%;
     width: 100%;
     background: $white;
     z-index: 0;
+    box-sizing: border-box;
 
     p {
         margin: 0px;
@@ -17,118 +16,214 @@
     .image {
         overflow: hidden;
         width: 100%;
+        max-height: 320px;
+        display: flex;
+        align-items: center;
+        border-radius: 0px 0px 5% 5%;
         img {
             width: 100%;
         }
         padding-bottom: 10px;
     }
 
-    .title {
+    .landscape {
+        display: none;
+    }
+
+    .text-section {
+        width: 100%;
         box-sizing: border-box;
         padding: 15px 20px;
-        font-weight: 700;
-        font-size: 40px;
-    }
 
-    .subtitle {
-        padding: 10px 20px;
-        box-sizing: border-box;
-    }
-
-    .list-items {
-        padding: 0px 51px;
-        box-sizing: border-box;
-        line-height: 21px;
-        vertical-align: top !important;
-
-        ul {
-            padding: 0px;
+        .title {
+            font-weight: 700;
+            font-size: 40px;
         }
 
-        li {
-            padding: 5px 0px;
-            list-style: none;
+        .subtitle {
+            padding: 10px 0px;
+        }
 
-            &::before {
-                position: absolute;
-                left: 21px;
-                content: url('../assets/images/icon-list.svg');
-                display: block;
+        .list-items {
+            padding-left: 40px;
+            line-height: 21px;
+
+            ul {
+                padding: 0px;
+            }
+
+            li {
+                padding: 5px 0px;
+                list-style: none;
+
+                &::before {
+                    position: absolute;
+                    left: 21px;
+                    content: url('../assets/images/icon-list.svg');
+                    display: block;
+                }
             }
         }
     }
 
-    .mail {
+    .form-section {
         position: absolute;
-        bottom: 115px;
-        margin-top: 40px;
-        padding: 0px 20px;
+        bottom: 0px;
+        padding: 20px 20px;
         box-sizing: border-box;
         width: 100%;
 
-        label {
-            font-size: 12px;
-        }
+        .mail {
+            position: relative;
 
-        .notic-label {
-            float: right;
-            color: tomato;
-            visibility: hidden;
-        }
+            label {
+                font-size: 12px;
+            }
 
-        .invalid {
-            visibility: visible;
-        }
+            .notice-label {
+                float: right;
+                visibility: hidden;
 
-        .mail-input {
-            margin-top: 5px;
-            font-size: 16px;
-            box-sizing: border-box;
-            border: 2px $Grey solid;
-            width: 100%;
-            border-radius: 10px;
-            height: 55px;
-            padding: 0px 20px;
-            transition: all 0.3s ease;
+                &.invalid {
+                    color: $tomato;
+                    visibility: visible;
+                }
+            }
 
-            &::placeholder {
+            .mail-input {
                 color: $Grey;
-            }
+                margin-top: 5px;
+                font-size: 16px;
+                box-sizing: border-box;
+                border: 2px $Grey solid;
+                width: 100%;
+                border-radius: 10px;
+                height: 55px;
+                padding: 0px 20px;
+                transition: all 0.3s ease;
 
-            &:focus {
-                color: $darkSlateGrey;
-                border-color: $darkSlateGrey;
+                &::placeholder {
+                    color: $Grey;
+                }
+
+                &:focus {
+                    color: $darkSlateGrey;
+                    border-color: $darkSlateGrey;
+                }
+
+                &:hover {
+                    border-color: $darkSlateGrey;
+                    cursor: pointer;
+                }
+
+                &.invalid {
+                    color: $tomato;
+                    background-color: lighten($tomato, 25%);
+                    border-color: $tomato;
+                }
             }
+        }
+
+        .subscribe-button {
+            position: relative;
+            margin: 20px 0px;
+            width: 100%;
+            height: 55px;
+            border-radius: 10px;
+            border: none;
+            background: $darkSlateGrey;
+            color: $white;
+            font-weight: 700;
+            font-size: 16px;
+            transition: 0.3s ease;
 
             &:hover {
-                border-color: $darkSlateGrey;
                 cursor: pointer;
+                background: $tomato;
+                box-shadow: 0px 5px 10px 0px rgba($tomato, 0.5);
+            }
+
+            &:active {
+                background: $tomato;
             }
         }
     }
+}
 
-    .subscribe-button {
-        position: absolute;
-        bottom: 20px;
-        margin: 20px 20px;
-        width: calc(100% - 40px);
-        height: 55px;
-        border-radius: 10px;
-        border: none;
-        background: $darkSlateGrey;
-        color: $white;
-        font-weight: 700;
-        font-size: 16px;
-        transition: 0.3s ease;
+@media only screen and (min-width: 768px) {
+    /* For tablet: */
+    .sign-up {
+        height: 100%;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 25px;
 
-        &:hover {
-            cursor: pointer;
-            background: $tomato;
-            box-shadow: 0px 5px 10px 0px rgba($tomato, 0.5);
+        .portrait {
+            display: none;
         }
 
-        &:active {
-            background: $tomato;
+        .landscape {
+            display: block;
+        }
+
+        main {
+            position: relative;
+            box-sizing: border-box;
+            width: 49%;
+            margin: 60px 20px;
+        }
+
+        .form-section {
+            width: 100%;
+        }
+
+        .image {
+            position: relative;
+            overflow: hidden;
+            width: 45%;
+            height: 100%;
+            max-height: none;
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        .text-section {
+            .title {
+                font-size: 55px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* For desktop: */
+    .sign-up {
+        height: 510px;
+        width: 520px;
+        transition: height 0.6s, width 0.6s;
+
+        main,
+        .image {
+            transition: opacity 0.3s;
+            opacity: 0;
+        }
+
+        &.active {
+            height: 640px;
+            width: 930px;
+
+            main,
+            .image {
+                opacity: 1;
+            }
         }
     }
 }

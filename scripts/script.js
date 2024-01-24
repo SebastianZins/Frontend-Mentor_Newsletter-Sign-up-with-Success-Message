@@ -7,6 +7,7 @@ function toggle_successMessageActive() {
     if (!isValid) {
         // if invalid show error and skip
         document.getElementById('notice-label').classList.add('invalid');
+        document.getElementById('mail-input').classList.add('invalid');
         return;
     }
 
@@ -18,10 +19,13 @@ function toggle_successMessageActive() {
     if (isActive) {
         // if active dismiss success message
         document.getElementById('success-message').classList.remove('active');
+        document.getElementById('sign-up').classList.add('active');
     } else {
         // if not active show success message and remove invalid label
         document.getElementById('success-message').classList.add('active');
+        document.getElementById('sign-up').classList.remove('active');
         document.getElementById('notice-label').classList.remove('invalid');
+        document.getElementById('mail-input').classList.remove('invalid');
     }
 }
 

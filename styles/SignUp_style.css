@@ -5,12 +5,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 .sign-up {
   position: absolute;
-  left: 0;
-  top: 0;
   height: 100%;
   width: 100%;
   background: hsl(0, 0%, 100%);
   z-index: 0;
+  box-sizing: border-box;
 }
 .sign-up p {
   margin: 0px;
@@ -18,60 +17,70 @@
 .sign-up .image {
   overflow: hidden;
   width: 100%;
+  max-height: 320px;
+  display: flex;
+  align-items: center;
+  border-radius: 0px 0px 5% 5%;
   padding-bottom: 10px;
 }
 .sign-up .image img {
   width: 100%;
 }
-.sign-up .title {
+.sign-up .landscape {
+  display: none;
+}
+.sign-up .text-section {
+  width: 100%;
   box-sizing: border-box;
   padding: 15px 20px;
+}
+.sign-up .text-section .title {
   font-weight: 700;
   font-size: 40px;
 }
-.sign-up .subtitle {
-  padding: 10px 20px;
-  box-sizing: border-box;
+.sign-up .text-section .subtitle {
+  padding: 10px 0px;
 }
-.sign-up .list-items {
-  padding: 0px 51px;
-  box-sizing: border-box;
+.sign-up .text-section .list-items {
+  padding-left: 40px;
   line-height: 21px;
-  vertical-align: top !important;
 }
-.sign-up .list-items ul {
+.sign-up .text-section .list-items ul {
   padding: 0px;
 }
-.sign-up .list-items li {
+.sign-up .text-section .list-items li {
   padding: 5px 0px;
   list-style: none;
 }
-.sign-up .list-items li::before {
+.sign-up .text-section .list-items li::before {
   position: absolute;
   left: 21px;
   content: url("../assets/images/icon-list.svg");
   display: block;
 }
-.sign-up .mail {
+.sign-up .form-section {
   position: absolute;
-  bottom: 115px;
-  margin-top: 40px;
-  padding: 0px 20px;
+  bottom: 0px;
+  padding: 20px 20px;
   box-sizing: border-box;
   width: 100%;
 }
-.sign-up .mail label {
+.sign-up .form-section .mail {
+  position: relative;
+}
+.sign-up .form-section .mail label {
   font-size: 12px;
 }
-.sign-up .mail .notic-label {
+.sign-up .form-section .mail .notice-label {
   float: right;
-  color: tomato;
   visibility: hidden;
 }
-.sign-up .mail .invalid {
+.sign-up .form-section .mail .notice-label.invalid {
+  color: hsl(4, 100%, 67%);
   visibility: visible;
 }
-.sign-up .mail .mail-input {
+.sign-up .form-section .mail .mail-input {
+  color: hsl(231, 7%, 60%);
   margin-top: 5px;
   font-size: 16px;
   box-sizing: border-box;
@@ -82,25 +91,29 @@
   padding: 0px 20px;
   transition: all 0.3s ease;
 }
-.sign-up .mail .mail-input::-moz-placeholder {
+.sign-up .form-section .mail .mail-input::-moz-placeholder {
   color: hsl(231, 7%, 60%);
 }
-.sign-up .mail .mail-input::placeholder {
+.sign-up .form-section .mail .mail-input::placeholder {
   color: hsl(231, 7%, 60%);
 }
-.sign-up .mail .mail-input:focus {
+.sign-up .form-section .mail .mail-input:focus {
   color: hsl(234, 29%, 20%);
   border-color: hsl(234, 29%, 20%);
 }
-.sign-up .mail .mail-input:hover {
+.sign-up .form-section .mail .mail-input:hover {
   border-color: hsl(234, 29%, 20%);
   cursor: pointer;
 }
-.sign-up .subscribe-button {
-  position: absolute;
-  bottom: 20px;
-  margin: 20px 20px;
-  width: calc(100% - 40px);
+.sign-up .form-section .mail .mail-input.invalid {
+  color: hsl(4, 100%, 67%);
+  background-color: #ffd9d6;
+  border-color: hsl(4, 100%, 67%);
+}
+.sign-up .form-section .subscribe-button {
+  position: relative;
+  margin: 20px 0px;
+  width: 100%;
   height: 55px;
   border-radius: 10px;
   border: none;
@@ -110,11 +123,77 @@
   font-size: 16px;
   transition: 0.3s ease;
 }
-.sign-up .subscribe-button:hover {
+.sign-up .form-section .subscribe-button:hover {
   cursor: pointer;
   background: hsl(4, 100%, 67%);
   box-shadow: 0px 5px 10px 0px rgba(255, 98, 87, 0.5);
 }
-.sign-up .subscribe-button:active {
+.sign-up .form-section .subscribe-button:active {
   background: hsl(4, 100%, 67%);
+}
+
+@media only screen and (min-width: 768px) {
+  /* For tablet: */
+  .sign-up {
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+  }
+  .sign-up .portrait {
+    display: none;
+  }
+  .sign-up .landscape {
+    display: block;
+  }
+  .sign-up main {
+    position: relative;
+    box-sizing: border-box;
+    width: 49%;
+    margin: 60px 20px;
+  }
+  .sign-up .form-section {
+    width: 100%;
+  }
+  .sign-up .image {
+    position: relative;
+    overflow: hidden;
+    width: 45%;
+    height: 100%;
+    max-height: none;
+  }
+  .sign-up .image img {
+    height: 100%;
+    width: auto;
+  }
+  .sign-up .text-section .title {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /* For desktop: */
+  .sign-up {
+    height: 510px;
+    width: 520px;
+    transition: height 0.6s, width 0.6s;
+  }
+  .sign-up main,
+  .sign-up .image {
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+  .sign-up.active {
+    height: 640px;
+    width: 930px;
+  }
+  .sign-up.active main,
+  .sign-up.active .image {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=SignUp_style.css.map */
