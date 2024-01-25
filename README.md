@@ -1,7 +1,7 @@
 # Frontend Mentor - Social links profile
 
 This is a solution to the [Newsletter sign-up form with success message](https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv/hub). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
-![Sign-up Message](https://github.com/SebastianZins/Frontend-Mentor_Newsletter-Sign-up-with-Success-Message/assets/34378623/8a95c374-6720-43c3-b8dc-888df9b1f667)
+![Sign-up Message](https://github.com/SebastianZins/Frontend-Mentor_Newsletter-Sign-up-with-Success-Message/assets/34378623/41280603-95e6-4e91-a1b1-00b528fae757)
 ![Success Message](https://github.com/SebastianZins/Frontend-Mentor_Newsletter-Sign-up-with-Success-Message/assets/34378623/091c6090-e954-494a-8fda-34df4a7f50ef)
 
 
